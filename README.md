@@ -18,10 +18,10 @@ O sistema tem dois caminhos: a **Escrita** (quando os dados entram) e a **Leitur
 
 | Passo | Serviço | O Que Acontece |
 | :--- | :--- | :--- |
-| **1. Upload** | **Amazon S3** (O Balde) | Você coloca um arquivo (ex: um JSON) no "balde" do S3. |
+| **1. Upload** | **Amazon S3**  | Você coloca um arquivo (ex: um JSON) no "balde" do S3. |
 | **2. Gatilho** | **S3 Trigger** | O S3 **avisa imediatamente** o nosso código sobre o novo arquivo. |
 | **3. Processamento** | **AWS Lambda (1ª Função)** | Nosso código **acorda**, lê o arquivo, transforma as informações e enriquece os dados. |
-| **4. Salvar** | **DynamoDB** (O Banco) | O código salva o resultado final no banco de dados. |
+| **4. Salvar** | **DynamoDB**  | O código salva o resultado final no banco de dados. |
 
 ### 2. Fluxo de Leitura (A Consulta)
 
@@ -32,9 +32,9 @@ O sistema tem dois caminhos: a **Escrita** (quando os dados entram) e a **Leitur
 | **3. Consulta** | **AWS Lambda (2ª Função)** | Este código **acorda**, vai até o DynamoDB e busca o item específico. |
 | **4. Resposta** | **API Gateway** | O porteiro entrega o resultado de volta para quem pediu. |
 
-## Por Que Usamos Estes Serviços?
+## Por Que Usar Estes Serviços?
 
-| Serviço | Motivo da Escolha (Por Que é Bom?) |
+| Serviço | Motivo da Escolha |
 | :--- | :--- |
 | **S3** | **Armazenamento de Início.** É o local mais seguro e barato para guardar arquivos antes de serem processados. |
 | **Lambda** | **Pague Pelo Uso.** Só rodamos e pagamos o código quando o arquivo é *realmente* enviado ou quando a API é *realmente* chamada. Não há servidores ligados 24/7. |
