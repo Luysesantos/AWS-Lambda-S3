@@ -1,4 +1,4 @@
-# Automação Serverless Simples (AWS S3, Lambda e DynamoDB)
+# Automação Serverless (AWS S3, Lambda e DynamoDB)
 
 Este projeto demonstra como construir uma **máquina de automação** que usa serviços da AWS (Amazon Web Services) que não precisam de servidores.
 
